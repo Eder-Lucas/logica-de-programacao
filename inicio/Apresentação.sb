@@ -1,0 +1,19 @@
+'  eu sou um comentário :)
+'  me acompanhe nessa jornada!
+
+TextWindow.ForegroundColor = "red"
+TextWindow.WriteLine("Hello, world!")
+
+TextWindow.ForegroundColor = "green"
+TextWindow.WriteLine("LÓGICA DE PROGRAMAÇÃO")
+
+TextWindow.ForegroundColor = "white"
+TextWindow.WriteLine("Seu nome é:")
+nome = TextWindow.Read()
+
+TextWindow.ForegroundColor = "yellow"
+TextWindow.WriteLine("- Olá " + nome+"!")
+
+TextWindow.ForegroundColor = "white"
+TextWindow.WriteLine("Eu me chamo Éder Lucas")
+textWindow.WriteLine("Esse é mais um passo nos meus estudos. Desejo empenho e muito foco para mim nessa jornada")
