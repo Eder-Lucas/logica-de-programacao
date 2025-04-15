@@ -1,0 +1,67 @@
+' função que modifica a cor perante ao nível do IMC
+Sub Cor
+If classificacao = "Muito abaixo do peso" or classificacao = "Obesidade 2" Then
+  TextWindow.ForegroundColor = "Red"
+ElseIf classificacao = "Abaixo do peso" or classificacao = "Acima do peso" Then
+  TextWindow.ForegroundColor = "Yellow"
+ElseIf classificacao = "Peso normal" Then
+  TextWindow.ForegroundColor = "green"
+ElseIf classificacao = "Obesidade 1" Then
+  TextWindow.ForegroundColor = "DarkYellow"
+ElseIf classificacao = "Obesidade 3" Then
+  TextWindow.ForegroundColor = "DarkRed"
+EndIf
+EndSub
+
+TextWindow.ForegroundColor = "Red"
+TextWindow.WriteLine("CALCULADORA DE IMC")
+
+TextWindow.WriteLine("") ' pula uma linha
+
+'  coletando dados
+TextWindow.ForegroundColor = "Cyan"
+TextWindow.Write("Digite seu peso: ")
+TextWindow.ForegroundColor = "white"
+peso = TextWindow.Read()
+
+TextWindow.ForegroundColor = "Cyan"
+TextWindow.Write("Digite sua altura: ")
+TextWindow.ForegroundColor = "white"
+altura = TextWindow.Read()
+
+' Cálculo IMC
+resultado = peso / Math.Power(altura, 2)
+resultado = Math.Round(resultado * 100) / 100 ' duas casas decimais
+
+' lógica para classificar o IMC
+If resultado < 17 Then
+  classificacao = "Muito abaixo do peso"
+ElseIf resultado < 18.49 Then 
+  classificacao = "Abaixo do peso"
+ElseIf resultado < 24.99 Then
+  classificacao = "Peso normal"
+ElseIf resultado < 29.99 Then
+  classificacao = "Acima do peso"
+ElseIf resultado < 34.99 Then
+  classificacao = "Obesidade 1"
+ElseIf resultado < 39.99 Then 
+  classificacao = "Obesidade 2"
+ElseIf resultado > 40 Then
+  classificacao = "Obesidade 3"
+EndIf
+
+' mostrando os resultados | LINHA 1
+TextWindow.WriteLine("")
+textWindow.ForegroundColor = "Cyan"
+TextWindow.Write("Seu IMC é: ")
+Cor() ' determina a cor mediante o nível do resultado
+TextWindow.WriteLine(resultado)
+
+' mostrando os resultados | LINHA 2
+TextWindow.ForegroundColor = "Cyan"
+TextWindow.Write("Classificação: ")
+Cor()
+textWindow.WriteLine(classificacao)
+TextWindow.ForegroundColor = "white"
+
+TextWindow.WriteLine("")
