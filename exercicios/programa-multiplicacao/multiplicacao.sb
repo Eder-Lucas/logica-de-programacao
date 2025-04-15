@@ -1,0 +1,24 @@
+TextWindow.ForegroundColor = "Red"
+TextWindow.WriteLine("PROGRAMA DE MULTIPLICAÇÃO")
+TextWindow.WriteLine("")
+
+TextWindow.ForegroundColor = "cyan"
+TextWindow.Write("Insira o primeiro valor: ")
+TextWindow.ForegroundColor = "white"
+valor1 = TextWindow.Read()
+
+TextWindow.ForegroundColor = "cyan"
+TextWindow.Write("Insira o segundo valor: ")
+TextWindow.ForegroundColor = "white"
+valor2 = TextWindow.Read()
+
+resultado = valor1*valor2 'multiplica os dois valores
+
+TextWindow.WriteLine("")
+TextWindow.ForegroundColor = "cyan"
+TextWindow.Write("O resultado é: ")
+TextWindow.ForegroundColor = "green"
+TextWindow.WriteLine(resultado)
+
+TextWindow.ForegroundColor = "white"
+TextWindow.WriteLine("")
