@@ -19,7 +19,7 @@ if usuario = dedicado and estudioso then
 endIf
 
 sub objetivo
-    textWindow.writeLine("tornar a vida mais prática")
+    TextWindow.writeLine("tornar a vida mais prática")
 endSub
 
 ~~~
@@ -32,9 +32,20 @@ endSub
 
 ## Sobre o programa 🛠️💻
 
-<img align="right" src="images/smallBasic-gif.gif" width="650" height="550">
+O SmallBasic é uma linguagem de programação simplificada criada pela Microsoft, com o objetivo de facilitar o aprendizado de programação para iniciantes.
 
-O SmallBasic é uma linguagem de programação simplificada criada pela Microsoft, com o objetivo de facilitar o aprendizado de programação para iniciantes. Ela é projetada para ser intuitiva e acessível, permitindo que qualquer pessoa, mesmo sem experiência prévia em programação, possa começar a criar seus próprios programas rapidamente.
+<p align="center">
+<img src="images/smallBasic-gif.gif" width="750" height="550">
+</p>
+
+~~~javascript
+i = "NaoSeiTudo"
+ThisProgram = "good"
+
+while ThisProgram = "good" And i = "NaoSeiTudo"
+   TextWindow.writeLine("Vou continuar estudando")
+EndWhile
+~~~
 
 ### Para executar os arquivos:
 
