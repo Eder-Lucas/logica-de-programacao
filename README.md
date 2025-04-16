@@ -32,6 +32,8 @@ endSub
 
 ## Sobre o programa 🛠️💻
 
+<img align="right" src="images/smallBasic-gif.gif" width="650" height="550">
+
 O SmallBasic é uma linguagem de programação simplificada criada pela Microsoft, com o objetivo de facilitar o aprendizado de programação para iniciantes. Ela é projetada para ser intuitiva e acessível, permitindo que qualquer pessoa, mesmo sem experiência prévia em programação, possa começar a criar seus próprios programas rapidamente.
 
 ### Para executar os arquivos:
@@ -39,6 +41,8 @@ O SmallBasic é uma linguagem de programação simplificada criada pela Microsof
 1. 💻 Faça o download do [SmallBasic](https://smallbasic-publicwebsite.azurewebsites.net/).
 2. ⬇️ Abra o arquivo `.sb` no SmallBasic.
 3. ⚙️ Execute o código!
+
+> ⚠️ **Aviso:** O GitHub não permite o envio de arquivos `.exe`. Por isso, o executável **não está incluído** neste repositório.
 
 
 
