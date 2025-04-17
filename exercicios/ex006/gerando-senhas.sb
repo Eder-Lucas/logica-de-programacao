@@ -1,0 +1,88 @@
+'Inicio do programa
+TextWindow.ForegroundColor = "red"
+TextWindow.WriteLine("---SUA SENHA---")
+TextWindow.WriteLine("")
+
+'primeira pergunta da senha
+TextWindow.ForegroundColor = "cyan"
+TextWindow.Write("Digite sua senha: ")
+TextWindow.ForegroundColor = "white"
+digitado = TextWindow.Read()
+
+'função que vai tratar das cores e algumas mensagens das tentativas dependendo de quantas sobraram
+Sub cor_mensagens_das_tentativas 
+  If tentativas = 3 Then
+    TextWindow.ForegroundColor = "green"
+  ElseIf tentativas = 2 Then
+    TextWindow.ForegroundColor = "darkYellow"
+  ElseIf tentativas = 1 Then 
+    TextWindow.ForegroundColor = "darkRed"
+    TextWindow.WriteLine("1 TENTATIVA ANTES DO PROGRAMA FECHAR")
+  EndIf
+EndSub
+
+'faz a pergunta da senha
+Sub perguntar_senha
+  TextWindow.ForegroundColor = "cyan"
+  TextWindow.Write("Digite sua senha: ")
+  TextWindow.ForegroundColor = "white"
+  digitado = TextWindow.Read()
+EndSub
+
+tentativas = 4 'inicialmente o usuário tem 4 tentativas
+senha = "1313" 'senha correta
+
+'enquanto a senha estiver diferente do que foi digitado pelo usuário
+While digitado <> senha
+  tentativas = tentativas - 1 'as tentativas diminuem
+  
+' quando não há mais tentativas
+  If tentativas < 1 Then
+    TextWindow.WriteLine("")
+    TextWindow.WriteLine("ENCERRANDO O PROGRAMA")
+    
+    'vai partir de 10 até 1 pulando de 1 em 1 acrescentando pontos por 1 segundo
+    For i = 10 To 1 Step -1
+      TextWindow.Write(".")
+      Program.Delay(1000)
+    EndFor
+    
+    Program.End() 'fecha o programa
+  EndIf
+  
+  TextWindow.ForegroundColor = "red"
+  TextWindow.WriteLine("Senha errada!")
+  
+  TextWindow.WriteLine("")
+  TextWindow.ForegroundColor = "cyan"
+  
+  cor_mensagens_das_tentativas() 'chama a sub-rotina
+  
+  'em todos os casos menos quando for igual 1
+  If tentativas <> 1 Then
+    TextWindow.WriteLine("Você tem " + tentativas + " tentativas")
+  EndIf
+  
+  perguntar_senha() 'refaz as perguntas
+  
+EndWhile
+
+'se a senha finalmente tiver certa
+If digitado = senha Then
+  TextWindow.ForegroundColor = "green"
+  TextWindow.WriteLine("Senha correta.")
+EndIf
+
+TextWindow.WriteLine("")
+TextWindow.ForegroundColor = "white"
+
+'mensagens adicionais
+If digitado = senha And tentativas = 4 Then
+  TextWindow.WriteLine("- De primeira!")
+ElseIf digitado = senha And tentativas > 1 And tentativas < 4 then 'entre 2 e 3
+  TextWindow.WriteLine("- Tenha mais atenção!")
+ElseIf digitado = senha and tentativas = 1 then
+  TextWindow.WriteLine("- Melhor anotar a senha!")
+EndIf
+
+TextWindow.WriteLine("")

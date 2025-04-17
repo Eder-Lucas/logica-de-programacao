@@ -1,0 +1,19 @@
+TextWindow.ForegroundColor = "red"
+TextWindow.WriteLine("---EMISSÃO DE INGRESSOS---")
+TextWindow.WriteLine("")
+
+TextWindow.ForegroundColor = "cyan"
+TextWindow.Write("Número de ingressos para emitir: ")
+TextWindow.ForegroundColor = "white"
+NumeroDeIngressos = TextWindow.Read()
+TextWindow.WriteLine("")
+
+For contador = 1 To NumeroDeIngressos
+  TextWindow.ForegroundColor = "green"
+  TextWindow.Write("Ingresso - ")
+  TextWindow.ForegroundColor = "darkYellow"
+  TextWindow.WriteLine("nº:" + contador)
+EndFor
+
+TextWindow.ForegroundColor = "white"
+TextWindow.WriteLine("")
