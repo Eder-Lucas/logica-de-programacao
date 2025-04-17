@@ -1,0 +1,15 @@
+' janela gráfica
+GraphicsWindow.Show()
+
+GraphicsWindow.BackgroundColor = "darkGray" 'muda a cor do fundo
+
+'desenha um circulo
+'onde:
+'(x, y, largura, altura)
+GraphicsWindow.FillEllipse(70, 110, 150, 150)
+
+GraphicsWindow.PenWidth = 20 'espressura
+GraphicsWindow.DrawRectangle(50, 80, 370, 210)'desenha um retângulo
+
+GraphicsWindow.BrushColor = "red" 'muda a cor
+GraphicsWindow.FillEllipse(250,110,150,150)
