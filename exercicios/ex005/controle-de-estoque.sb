@@ -1,0 +1,17 @@
+TextWindow.ForegroundColor = "red"
+TextWindow.WriteLine("---ESTOQUE---")
+TextWindow.WriteLine("")
+
+TextWindow.ForegroundColor = "Cyan"
+TextWindow.Write("Qual a quantidade de produtos no estoque? ")
+TextWindow.ForegroundColor = "white"
+estoque = TextWindow.Read()
+TextWindow.WriteLine("")
+
+If estoque < 10 Then 
+  TextWindow.WriteLine("EStoque muito baixo! Compre mais!")
+Else
+  TextWindow.WriteLine("Estoque dentro dos níveis normais.")
+EndIf
+
+TextWindow.WriteLine("")
