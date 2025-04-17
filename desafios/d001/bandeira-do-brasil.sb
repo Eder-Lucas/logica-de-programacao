@@ -1,0 +1,14 @@
+GraphicsWindow.Show()
+
+GraphicsWindow.PenWidth = 5
+GraphicsWindow.PenColor = "green"
+GraphicsWindow.DrawRectangle(5, 45, 190, 110)
+
+GraphicsWindow.PenColor = "yellow"
+GraphicsWindow.DrawLine(100, 50, 50, 100)
+GraphicsWindow.DrawLine(50, 100, 100, 150)
+GraphicsWindow.DrawLine(100, 150, 150, 100)
+GraphicsWindow.DrawLine(150, 100, 100, 50)
+
+GraphicsWindow.PenColor = "blue"
+GraphicsWindow.DrawEllipse(70, 70, 60, 60)
