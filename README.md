@@ -19,7 +19,7 @@ if usuario = dedicado and estudioso then
 endIf
 
 sub objetivo
-    textWindow.writeLine("tornar a vida mais prática")
+    TextWindow.writeLine("tornar a vida mais prática")
 endSub
 
 ~~~
@@ -32,13 +32,28 @@ endSub
 
 ## Sobre o programa 🛠️💻
 
-O SmallBasic é uma linguagem de programação simplificada criada pela Microsoft, com o objetivo de facilitar o aprendizado de programação para iniciantes. Ela é projetada para ser intuitiva e acessível, permitindo que qualquer pessoa, mesmo sem experiência prévia em programação, possa começar a criar seus próprios programas rapidamente.
+O SmallBasic é uma linguagem de programação simplificada criada pela Microsoft, com o objetivo de facilitar o aprendizado de programação para iniciantes.
+
+<p align="center">
+<img src="images/smallBasic-gif.gif" width="750" height="550">
+</p>
+
+~~~javascript
+i = "NaoSeiTudo"
+ThisProgram = "good"
+
+while ThisProgram = "good" And i = "NaoSeiTudo"
+   TextWindow.writeLine("Vou continuar estudando")
+EndWhile
+~~~
 
 ### Para executar os arquivos:
 
 1. 💻 Faça o download do [SmallBasic](https://smallbasic-publicwebsite.azurewebsites.net/).
 2. ⬇️ Abra o arquivo `.sb` no SmallBasic.
 3. ⚙️ Execute o código!
+
+> ⚠️ **Aviso:** O GitHub não permite o envio de arquivos `.exe`. Por isso, o executável **não está incluído** neste repositório.
 
 
 
