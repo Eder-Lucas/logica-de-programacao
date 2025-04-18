@@ -1,0 +1,17 @@
+Sub MostrarHora
+  TextWindow.ForegroundColor = "green"
+  TextWindow.Write(Clock.Time)
+  TextWindow.ForegroundColor = "white"
+  TextWindow.WriteLine(" Horário de Brasília")
+EndSub
+
+TextWindow.ForegroundColor = "red"
+TextWindow.WriteLine("---TESTES COM SUB-ROTINA---")
+
+TextWindow.WriteLine("")
+
+TextWindow.ForegroundColor = "darkYellow"
+TextWindow.WriteLine("Bem-vindo ao programa!")
+MostrarHora()
+
+TextWindow.WriteLine("")
