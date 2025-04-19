@@ -1,0 +1,12 @@
+GraphicsWindow.MouseUp = MouseSolto
+Sub MouseSolto
+  GraphicsWindow.ShowMessage("Você soltou o mouse", "Program 008")
+EndSub
+
+GraphicsWindow.KeyUp = TeclaSolta
+Sub TeclaSolta
+  tecla = GraphicsWindow.LastKey
+  GraphicsWindow.ShowMessage("Você soltou a telca " + tecla, "Program 008")
+EndSub
+
+GraphicsWindow.DrawText(1,5,"Solte as teclas e o mouse")
