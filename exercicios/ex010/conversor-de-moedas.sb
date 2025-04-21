@@ -1,0 +1,27 @@
+TextWindow.ForegroundColor = "red"
+TextWindow.WriteLine("---CONVERSOR DE MOEDAS---")
+
+TextWindow.WriteLine("")
+TextWindow.ForegroundColor = "cyan"
+
+TextWindow.Write("Valor em Reais: ")
+TextWindow.ForegroundColor = "white"
+reais = TextWindow.Read()
+
+TextWindow.ForegroundColor = "cyan"
+TextWindow.WriteLine("")
+
+TextWindow.Write("Qual a cotação do Dólar? ")
+TextWindow.ForegroundColor = "white"
+dolar = TextWindow.Read()
+
+conversao = reais/dolar
+conversao = Math.Round(conversao * 100) / 100
+
+TextWindow.WriteLine("")
+TextWindow.ForegroundColor = "darkYellow"
+
+TextWindow.WriteLine("O valor em Dólar é U$" + conversao)
+
+TextWindow.WriteLine("")
+TextWindow.ForegroundColor = "white"
