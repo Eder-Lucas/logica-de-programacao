@@ -1,0 +1,8 @@
+Turtle.Show()
+GraphicsWindow.MouseDown = move
+Sub move 
+  x = GraphicsWindow.MouseX
+  y = GraphicsWindow.MouseY
+  
+  Turtle.MoveTo(x,y)
+EndSub
