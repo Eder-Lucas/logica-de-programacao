@@ -1,6 +1,12 @@
 GraphicsWindow.MouseDown = MousePressionado
 Sub MousePressionado
-  GraphicsWindow.ShowMessage("Você pressionou com o mouse.", "Program 008")
+  If Mouse.IsLeftButtonDown Then
+    GraphicsWindow.ShowMessage("Você pressionou com o mouse esquerdo", "Program 008")
+  EndIf
+  
+  If Mouse.IsRightButtonDown Then
+    GraphicsWindow.ShowMessage("Você pressionou com o mouse direito", "Program 008")
+  EndIf
 EndSub
 
 GraphicsWindow.KeyDown = TeclaPressionada
