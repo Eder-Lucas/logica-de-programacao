@@ -1,7 +1,25 @@
 GraphicsWindow.MouseUp = MouseSolto
 Sub MouseSolto
-  GraphicsWindow.ShowMessage("Você soltou o mouse", "Program 008")
+  If botaoL = "true" Then
+    GraphicsWindow.ShowMessage("Você soltou o mouse esquerdo", "Program 008")
+  EndIf
+  
+  If botaoL = "false" Then
+    GraphicsWindow.ShowMessage("Você soltou o mouse direito", "Program 008")
+   EndIf
 EndSub
+
+GraphicsWindow.MouseDown = moused
+Sub moused
+   if Mouse.IsLeftButtonDown then
+     botaoL = "True"
+   EndIf
+   
+   if Mouse.IsRightButtonDown Then
+     botaoL = "false"
+   EndIf
+EndSub
+
 
 GraphicsWindow.KeyUp = TeclaSolta
 Sub TeclaSolta
