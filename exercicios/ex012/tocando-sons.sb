@@ -1,0 +1,12 @@
+GraphicsWindow.MouseDown = click
+Sub click
+  If (Mouse.IsLeftButtonDown) Then
+    Sound.PlayBellRing()
+  EndIf
+  
+  If (Mouse.IsRightButtonDown) Then
+    Sound.PlayChime()
+  EndIf
+EndSub
+
+GraphicsWindow.DrawText(1, 5, "Clique com os lados do mouse para escutar os sons")
