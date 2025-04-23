@@ -1,0 +1,29 @@
+GraphicsWindow.DrawText(1, 5, "TOCAR MÚSICA PRESSIONE 'A'")
+GraphicsWindow.DrawText(1, 25, "PAUSAR PRESSIONE 'S'")
+GraphicsWindow.DrawText(1, 50, "REINICIAR PRESSIONE 'D'")
+GraphicsWindow.DrawText(1, 75, "PARAR A MÚSICA PRESSIONE 'Q'")
+GraphicsWindow.DrawText(1, 150, "Música: 'Dia de Feira' de Kirá Chao – Spotify – Licença CC BY-NC")
+
+GraphicsWindow.KeyDown = playSound
+Sub playSound
+  tecla = GraphicsWindow.LastKey
+  
+  If tecla = "A" Then 
+    Sound.Play("C:\Users\Éder Lucas\Documents\estudos\logica-de-programacao\desafios\d002\dia-de-feira.mp3")
+  EndIf
+  
+  If tecla = "S" Then
+    Sound.Pause("C:\Users\Éder Lucas\Documents\estudos\logica-de-programacao\desafios\d002\dia-de-feira.mp3")
+  EndIf
+  
+  If tecla = "D" Then
+    Sound.Stop("C:\Users\Éder Lucas\Documents\estudos\logica-de-programacao\desafios\d002\dia-de-feira.mp3")
+    Program.Delay(2000)
+    Sound.Play("C:\Users\Éder Lucas\Documents\estudos\logica-de-programacao\desafios\d002\dia-de-feira.mp3")
+  EndIf
+  
+  If tecla = "Q" Then
+    Sound.Stop("C:\Users\Éder Lucas\Documents\estudos\logica-de-programacao\desafios\d002\dia-de-feira.mp3")
+  EndIf
+EndSub
+  
