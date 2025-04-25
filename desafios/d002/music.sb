@@ -1,7 +1,10 @@
+GraphicsWindow.BrushColor = "Red"
 GraphicsWindow.DrawText(1, 5, "TOCAR MÚSICA PRESSIONE 'A'")
 GraphicsWindow.DrawText(1, 25, "PAUSAR PRESSIONE 'S'")
-GraphicsWindow.DrawText(1, 50, "REINICIAR PRESSIONE 'D'")
-GraphicsWindow.DrawText(1, 75, "PARAR A MÚSICA PRESSIONE 'Q'")
+GraphicsWindow.DrawText(1, 45, "REINICIAR PRESSIONE 'D'")
+GraphicsWindow.DrawText(1, 65, "PARAR A MÚSICA PRESSIONE 'Q'")
+
+GraphicsWindow.BrushColor = "black"
 GraphicsWindow.DrawText(1, 150, "Música: 'Dia de Feira' de Kirá Chao – Spotify – Licença CC BY-NC")
 
 GraphicsWindow.KeyDown = playSound
