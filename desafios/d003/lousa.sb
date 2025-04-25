@@ -1,0 +1,38 @@
+GraphicsWindow.BackgroundColor = "DarkGreen"
+GraphicsWindow.MouseDown = desenhar
+
+Sub desenhar
+  x1 = GraphicsWindow.MouseX
+  y1 = GraphicsWindow.MouseY
+  
+  While Mouse.IsLeftButtonDown
+    x2 = GraphicsWindow.MouseX
+    y2 = GraphicsWindow.MouseY
+    
+    GraphicsWindow.PenColor = "white"
+    GraphicsWindow.PenWidth = 10
+    GraphicsWindow.DrawLine(x1, y1, x2, y2)
+    
+    GraphicsWindow.BrushColor = "white"
+    GraphicsWindow.FillEllipse(x2, y2, 2, 2)
+    
+    x1 = x2
+    y1 = y2
+  EndWhile
+  
+  While Mouse.IsRightButtonDown 
+    x = GraphicsWindow.MouseX
+    y = GraphicsWindow.MouseY
+    
+    GraphicsWindow.PenColor = "DarkGreen"
+    GraphicsWindow.PenWidth = 45
+    GraphicsWindow.DrawLine(x1 , y1, x, y)
+    
+    GraphicsWindow.BrushColor = "DarkGreen"
+    GraphicsWindow.FillEllipse(x, y, 15, 15)
+    
+    x1 = x
+    y1 = y
+  EndWhile
+EndSub
+  
